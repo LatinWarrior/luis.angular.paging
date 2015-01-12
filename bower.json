@@ -1,0 +1,32 @@
+{
+  "name": "Luis.Angular.Paging",
+  "version": "0.0.1",
+  "authors": [
+    "Luis Blanco 路易斯.布兰科 <luis_blanco@volusion.com>"
+  ],
+  "description": "Paging with Angular and ASP.NET",
+  "main": "index.html",
+  "keywords": [
+    "AngularJS",
+    "ASP.NET",
+    "Web",
+    "API"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angularjs": "~1.3.8",
+    "bootstrap": "~3.3.1",
+    "toastr": "~2.1.0",
+    "angular-resource": "~1.3.8",
+    "angular-ui-router": "~0.2.13",
+    "ui-utils": "~0.2.1",
+    "ui-bootstrap": "~0.12.0"
+  }
+}
