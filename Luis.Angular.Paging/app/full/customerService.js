@@ -9,7 +9,7 @@
 
     function customerService($http, $q, customerClientService) {
         var initialOptions = {
-            size: 100,
+            pageSize: 100,
             orderBy: "name"
         },
         service = {
@@ -35,7 +35,7 @@
 
         function initialize() {
             var queryArgs = {
-                pageSize: service.paging.options.size,
+                pageSize: service.paging.options.pageSize,
                 pageNumber: service.paging.info.currentPage
             };
 
@@ -84,7 +84,7 @@
 
         function load(pageNumber) {
             var queryArgs = {
-                pageSize: service.paging.options.size,
+                pageSize: service.paging.options.pageSize,
                 pageNumber: pageNumber,
                 orderBy: service.paging.options.orderBy
             };
