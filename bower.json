@@ -27,6 +27,8 @@
     "angular-resource": "~1.3.8",
     "angular-ui-router": "~0.2.13",
     "ui-utils": "~0.2.1",
-    "ui-bootstrap": "~0.12.0"
+    "ui-bootstrap": "~0.12.0",
+    "angular-utils-pagination": "~0.5.0",
+    "angular-route": "~1.3.8"
   }
 }

@@ -131,7 +131,7 @@
                 "lastName": "Simpson",
                 "email": "parker_simpson@mozu.com"
             }
-        ];
+        ];        
 
         var customerUrl = "/api/customers";
 

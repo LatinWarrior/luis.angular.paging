@@ -27,15 +27,14 @@
                     </button>
                 </div>
                 <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a ui-sref="customerList">Customer List</a></li>                        
-                    </ul>
+                    <div ng-include="'/app/nav.html'"></div>
+                    <div ng-view></div>
                 </div>
             </div>
         </nav>
 
         <div class="container">
-            <div ui-view></div>
+            
         </div>
         
         <!-- Library Scripts -->
@@ -43,22 +42,28 @@
         <script src="js/angular.js"></script>
         <script src="js/angular-resource.js"></script>
         <script src="js/angular-mocks.js"></script>
-        <script src="js/angular-ui-router.js"></script>
+        <script src="js/angular-route.js"></script>        
+        <!--<script src="js/angular-ui-router.js"></script>-->
         <script src="js/bootstrap.js"></script>
         <script src="js/ui-utils.js"></script>
         <script src="js/ui-bootstrap-tpls-0.11.0.js"></script>
         <script src="js/toastr.js"></script>
+        <!--<script src="js/dirPagination.js"></script>-->
         
         <!-- Application Script -->
         <script src="app/app.js"></script>
         
         <!-- Services -->
-        <script src="common/services/common.services.js"></script>
-        <script src="common/services/customerResource.js"></script>
-        <script src="common/services/customerResourceMock.js"></script>               
+        <!--<script src="common/services/common.services.js"></script>-->
+        <!--<script src="common/services/customerResource.js"></script>
+        <script src="common/services/customerResourceMock.js"></script>-->               
+        <script src="app/customerClientService.js"></script>
+        <script src="app/full/customerService.js"></script>
+        <script src="app/full/pager.js"></script>
         
         <!-- Customer Controllers -->
-        <script src="app/customers/customerListCtrl.js"></script>
+        <!--<script src="app/customers/customerListCtrl.js"></script>-->
+        <script src="app/full/customerCtrl.js"></script>
 
     </body>
 </html>

@@ -12,6 +12,10 @@
 
         var vm = this;
 
+        vm.totalUsers = 0;
+        vm.usersPerPage = 5;
+
+
         customerResource.query(function (data) {
             vm.customers = data;
         });

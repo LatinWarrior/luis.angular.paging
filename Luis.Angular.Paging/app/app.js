@@ -1,37 +1,68 @@
 ﻿(function() {
 
-    "use strict";
+    'use strict';
 
-    var app = angular.module("customerManagement",
-    [
-        "common.services",
-        "ui.router",
-        "ui.mask",
-        "ui.bootstrap",
-        "customerResourceMock"
-    ]);
+    var app = angular.module('customerManagement', ['ngResource', 'ngRoute']);
 
     app.config([
-            "$stateProvider",
-            "$urlRouterProvider",
-            function ($stateProvider, $urlRouterProvider) {
+        '$routeProvider', function($routeProvider) {
 
-                $urlRouterProvider.otherwise("/");
+            $routeProvider.when('/fullPaging', {
+                templateUrl: 'app/full/full.html',
+                controller: 'CustomerCtrl',
+                caseInsensitiveMatch: true
+            });
+            $routeProvider.otherwise({
+                redirectTo: '/'
+            });
+        }
+    ]);
 
-                $stateProvider
-                    .state("home", {
-                        url: "/",
-                        templateUrl: "app/welcomeView.html"
-                    })
-                    // Customers
-                    .state("customerList", {
-                        url: "/api/customers",
-                        templateUrl: "app/customers/customerListView.html",
-                        controller: "CustomerListCtrl as vm"
-                    });
-
-            }
-        ]
-    );
+    app.run([
+        function() {
+        }
+    ]);
 
 })();
+
+
+
+//(function () {
+
+//    "use strict";
+
+//    var app = angular.module("customerManagement",
+//    [
+//        "common.services",
+//        "ui.router",
+//        "ui.mask",
+//        "ui.bootstrap"
+//        //"customerResourceMock"
+//    ]);
+
+//    app.config([
+//            "$stateProvider",
+//            "$urlRouterProvider",
+//            function ($stateProvider, $urlRouterProvider) {
+
+//                console.log("In app.js");
+
+//                $urlRouterProvider.otherwise("/");
+
+//                $stateProvider
+//                    .state("home", {
+//                        url: "/",
+//                        templateUrl: "app/welcomeView.html"
+//                    })
+//                    // Customers
+//                    .state("customerList", {
+//                        url: "/api/customers",
+//                        isArray: false,
+//                        templateUrl: "app/full/full.html",
+//                        controller: "CustomerCtrl as vm"
+//                    });
+//            }
+//        ]
+//    );
+
+//})();
